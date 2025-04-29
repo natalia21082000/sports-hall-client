@@ -1,0 +1,12 @@
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.8em;
+}
