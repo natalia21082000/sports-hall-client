@@ -52,7 +52,7 @@ function handleLogin() {
         const loginData = Object.fromEntries(formData.entries());
 
         try {
-            const response = await fetch('https://localhost:7177/api/login', {
+            const response = await fetch('http://localhost:5127/api/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(loginData)
@@ -63,7 +63,7 @@ function handleLogin() {
             if (response.ok) {
                 document.getElementById('loginSuccessMessage').textContent = data.Message || 'Вы успешно вошли в систему.';
                 document.getElementById('loginSuccessMessage').style.display = 'block';
-                document.getElementById('loginForm').reset();
+               // document.getElementById('loginForm').reset();
 
                 const loginModal = document.getElementById('loginModal');
                 const modal = bootstrap.Modal.getInstance(loginModal);
